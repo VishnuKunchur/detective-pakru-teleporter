@@ -1,0 +1,74 @@
+<!-- HTML TEMPLATE FOR STAFF CREDENTIALS VERIFICATION -->
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>The Adventures of Detective Pakru</title>
+    </header>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/intro.css') }}"/>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <br>
+            <h1><strong>Detective Pakru and the Teleportation Device</strong></h1>
+            <br>
+            <div class="textbox-config">
+                <p>
+                    The August twilight was still warm when Detective Pakru yawned and finally mustered the will to switch on her table-fan.  
+                </p><br>
+                <p>
+                    It had been several weeks since she had last solved a case and business was dull, much like the grey <i>Fogust</i> mornings during that time of
+                    the year. She opened the <i>Doordash</i> app on her phone, and considered ordering in a <i>boba</i>. Then she paused to check her bank balance on the <i>Chase</i> 
+                    app, and decided against ordering in <i>boba</i>. Her stomach rumbled, and she thought it might be a good idea to watch some Kerala street food 
+                    vlogs. Then she started to dream of Keezhattingal. And then, soothed by the gentle winds from her trusty table-fan, she nodded off on her couch.
+                </p><br>
+                <p>
+                    She woke up, startled at the tone of a flurry of incoming messages on her phone. Wait - they did not sound like her regular text messages. 
+                    Could it be - could Acchu really be sending messages on <strong>പറയു</strong> (<strong>parayu</strong>, which is Malayalam for "speak")? Acchu and Pakru's friendship went back all the way to Keezhattingal, 
+                    long before Acchu became fascinated with computers and code. When they were in middle school Acchu built <strong>പറയു</strong>, a private messaging 
+                    mobile app that Pakru and Acchu used to exchange secret messages sometimes. Today, Pakru's <strong>പറയു</strong> alerts seemed to be pouring in at a 
+                    relentless pace. Acchu, or Dr Aswati Unnikrishnan, was among the most prolific computer scientist - social activists of her generation and worked at 
+                    ICHEP, a physics research institute that did some pretty cutting edge research. Beyond that, Pakru did not know much about ICHEP. She secretly 
+                    felt like she knew even less about Acchu now than she knew about ICHEP, given that it had been about 5 years since they had last spoken.
+                </p><br>
+                <p>
+                    Rousing herself from her reverie, Detective Pakru scrolled up to the first message:
+                </p><br>
+            </div>
+
+            <div class="gossip-app-box">            
+                <h3 class="from-them"><strong>പറയു</strong></h3><br>
+                <p class="from-them">hey Pakru..</p>
+                <p class="from-them">how are you. look I don’t have a lot of time</p>
+                <p class="from-them">you are the only one I can count on. Things are fucked up here. They located and sedated me as soon as I learned of Miller’s nefarious plans…fucking Grant Miller</p>
+                <p class="from-them">always acting like he had ichep’s best interests..that snake</p>
+                <p class="from-them">Pakru I know you don’t know much about ichep..but you are the only one who can help me right now</p>
+                <p class="from-them">this may be hard to believe, but the guys at ichep figured out how to build a small scale teleporter...i know it sounds crazy. i thought it was crazy too until i saw it</p>
+                <p class="from-them">it doesnt do much now..it can teleport only small things and within a short distance..the cosmic strings arent stable enough to allow long range teleportation..anyway</p>
+                <p class="from-them">the teleporter was supposed to be handed over to DARPA tomorrow so Uncle Sam could start using the tech...but Grant and his cronies have other plans</p>
+                <p class="from-them">imagine this tech in the hands of child traffickers..arms suppliers..imagine how much this tech can be misused if its in the wrong hands</p>
+                <p class="from-them">we need to pause the teleporter before its too late. I need your help to switch the teleporter to dormant mode..that will buy me enough time to talk to DARPA myself..yes..once the teleporter is dormant it will take a long time to set up the cosmic-string stabilizer unit again..that will give enough time for the Feds to nab Grant and his stooges</p>
+                <p class="from-them">the only way to change the teleporter’s settings is to go through the authentication module..there are 5 ichep staff members who need to provide their authentications to enforce the change…if even one rogue hacker is suspected, like if theres a username mismatch, the whole teleporter will be terminated and ichep loses all its reputation. So we need to be very careful – there cant be any slip ups..</p>
+                <p class="from-them">who are the 5 ichep members that need to validate the module? I have no idea..only Julia may know that. And for our sake, you have to find out who’s involved. Julia has to be one of the validators obviously…I’m almost sure Avila and Akiyama are also involved..and Miller, ofcourse</p>
+                <p class="from-them">the problem is..you need to guess the right username on the right authentication level..nobody but Julia would know who authenticates what level again..though I feel Julia would be the first level..</p>
+                <p class="from-them">the username shouldn’t be an issue..you should be able to get the username from the email IDs..the password will be the harder part</p>
+                <p class="from-them">people say its hard to guess passwords..but you’d be surprised by how much you can learn from someone’s bio..each password is special for the person setting the password. Its always going to be something a person feels strongly about..and its almost always going to be guessable from publicly available knowledge</p>
+                <p class="from-them">you probably don’t understand a word of what I’ve said so far..and that’s ok..i feel the medicine kicking in……</p>
+                <p class="from-them">I patched the teleporter dormancy module here so you can try to crack the authentication..have u ever seen the ichep website btw? hang on..i’ll put a link to our website as well so you can see the bios..</p>
+                <a href="https://kunchurvishnu.wixsite.com/ichep" target="_blank"><strong>www.ichep.org</strong></a>
+                <p class="from-them">click this link below to patch your device to the dormancy module..unfortunately this is all i am able to help you with..</p>
+                <a href="{{url_for('module_home')}}" target="_blank"><strong>TELEPORTER DORMANCY MODULE</strong></a>
+                <p class="from-them">find the 5 people involved with authentication of the teleporter dormancy module..find the right username and the right password for each level…and make this teleporter dormant. If this does not go dormant now, Grant will hand over this tech to his crony capitalist friends who will almost certainly use this tech for evil</p>
+                <p class="from-them">you are our only hope Pakru….</p>
+                <p class="from-them">Pakru?</p>
+                <p class="from-them">ketto?</p>
+            </div>
+        </div>
+        
+    
+    </body>
+</html>

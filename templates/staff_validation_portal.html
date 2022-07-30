@@ -1,0 +1,72 @@
+<!-- HTML TEMPLATE FOR STAFF CREDENTIALS VERIFICATION -->
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>staff_validation_portal</title>
+    </header>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/staff_validation_portal.css') }}"/>
+    </head>
+    <body id='main'>
+        <div class="container-fluid">
+            <div class="text-center">
+                <img src='static/images/ichep-logo.PNG' style="width:248px;height:152px;">
+            </div>
+            <br>
+            <div class="text-center">
+                <h3>TELEPORTER DORMANCY MODULE</h3>
+                <!--LIGHTS PANEL-->
+                <div class="light-panel">
+                    {% for shape_color in LightPanel.values()%}
+                        <div class={{shape_color}}></div>
+                    {% endfor %}
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="text-center">
+                <h5>AUTHENTICATION: LEVEL {{CurrentLevel}} </h5>
+            </div>
+            <br>
+            <!--display username / password form while GameSession verdict is 'play'-->
+
+            <div class="text-center">
+                {% if not TerminalStateAchieved %}
+                <form action="/validate_credentials" method="POST">
+                    <label for="guess_username">USERNAME</label>
+                    <input type="text" required maxlength="2048" id="guess_username" name="guess_username" placeholder=""><br>
+                    <label for="guess_password">PASSWORD</label>
+                    <input type="password" required maxlength="2048" id="guess_password" name="guess_password" placeholder=""><br>
+                    <button type="submit" name="submit" id="submit"><img src='static/images/submit-button.PNG' style="width:104px;height:36px;"></button>
+                </form>
+                {% endif %}
+                <br>
+                <p><strong>{{DisplayMessage}}</strong></p>
+            </div>
+
+            {% if GameLost %}
+            <div class="text-center">
+                <h2 class="red-text"><strong>MISSION FAILED</strong></h2>
+                <form action="/teleporter_dormancy_module" method="POST">
+                    <button type="submit" name="tryagain" id="tryagain"><img src='static/images/tryagain-button.PNG'></button>
+                </form>
+            </div>
+            {% endif %}
+
+            {% if GameWon %}
+            <div class="text-center">
+                <h6>TELEPORTER IS NOW ACTIVE. CLONING STATUS TO DARPA.</h6>
+                <h2 class="green-text"><strong>MISSION COMPLETE</strong></h2>
+                <!--show epilogue-->
+                <form action="/epilogue" method='POST'>
+                    <button type="submit">EPILOGUE</button>
+                </form>
+            </div>
+            {% endif %}
+        </div>
+    </body>
+
+</html>

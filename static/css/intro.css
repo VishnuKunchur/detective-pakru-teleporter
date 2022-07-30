@@ -1,0 +1,55 @@
+body {
+    background-color: #694343;
+    color:black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.textbox-config {
+    text-align: justify;
+    justify-content: center;
+    } 
+
+.gossip-app-box {
+    background-color: rgb(231, 165, 103);
+    border: 1px solid rgb(255, 251, 251);
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', monospace;
+    margin: 0 auto 1rem;
+    max-width: 800px;
+    padding: 0.5rem 1.5rem;
+}
+
+.gossip-app-box h3 {
+    font-size: 1.5rem;
+    font-family: "Georgia"
+}
+
+h3.from-them {
+    color: rgb(156, 42, 61);
+}
+
+.gossip-app-box p {
+    border-radius: 1.15rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    max-width: 75%;
+    padding: 0.5rem .875rem;
+    position: relative;
+    word-wrap: break-word;
+}
+
+p.from-them {
+    align-items: flex-start;
+    background-color: #e7ded5;
+    color: #000;
+}
+
+
+    

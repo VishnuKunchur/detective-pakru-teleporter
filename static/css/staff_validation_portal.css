@@ -1,0 +1,73 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color:white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+}
+
+h2.red-text {
+	color: red;
+	font-family: 'Courier New', monospace;
+}
+
+h2.green-text {
+	color: green;
+	font-family: 'Courier New', monospace;
+}
+
+/*lights*/
+.light-panel {
+	background-color: #0B0B0B;
+	margin: auto;
+	border-radius: 50px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	padding: 15px 0;
+	height: 70px;
+	width: 400px;
+}
+
+.circle-inactive {
+    background-color: #313432;
+    border-radius: 100%;
+	position: relative;
+	height: 40px;
+	width: 40px;
+}
+
+
+.circle-red {
+    background-color: #F4240C;
+    box-shadow: 0 0 15px 4px #F4240C;
+	border-radius: 100%;
+	position: relative;
+	height: 40px;
+	width: 40px;
+}
+
+.circle-yellow {
+	background-color: #f1c40f;
+    box-shadow: 0 0 15px 5px #f1c40f;
+    border-radius: 100%;
+	position: relative;
+	height: 40px;
+	width: 40px;
+}
+
+.circle-green {
+	background-color: #0D5C06;
+    box-shadow: 0 0 20px 5px #0D5C06;
+    border-radius: 100%;
+	position: relative;
+	height: 40px;
+	width: 40px;
+}
