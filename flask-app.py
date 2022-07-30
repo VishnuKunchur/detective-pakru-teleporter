@@ -99,4 +99,4 @@ def show_epilogue():
 app testing ground:
 """
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(threaded=True, port=5000)
