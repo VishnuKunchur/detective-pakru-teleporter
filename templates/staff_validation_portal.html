@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <header>
-        <title>staff_validation_portal</title>
+        <title>ICHEP TDM Validation</title>
     </header>
     <head>
         <meta charset="utf-8">
@@ -40,7 +40,7 @@
                     <input type="text" required maxlength="2048" id="guess_username" name="guess_username" placeholder=""><br>
                     <label for="guess_password">PASSWORD</label>
                     <input type="password" required maxlength="2048" id="guess_password" name="guess_password" placeholder=""><br>
-                    <button type="submit" name="submit" id="submit"><img src='static/images/submit-button.PNG' style="width:104px;height:36px;"></button>
+                    <button type="submit" name="submit" id="submit">SUBMIT</button>
                 </form>
                 {% endif %}
                 <br>
@@ -50,15 +50,15 @@
             {% if GameLost %}
             <div class="text-center">
                 <h2 class="red-text"><strong>MISSION FAILED</strong></h2>
-                <form action="/teleporter_dormancy_module" method="POST">
-                    <button type="submit" name="tryagain" id="tryagain"><img src='static/images/tryagain-button.PNG'></button>
+                <form action="/" method="POST">
+                    <button type="submit" name="tryagain" id="tryagain">TRY AGAIN</button>
                 </form>
             </div>
             {% endif %}
 
             {% if GameWon %}
             <div class="text-center">
-                <h6>TELEPORTER IS NOW ACTIVE. CLONING STATUS TO DARPA.</h6>
+                <h6>TELEPORTER IS NOW ACTIVE. CLONING STATUS TO D.A.R.P.A.</h6>
                 <h2 class="green-text"><strong>MISSION COMPLETE</strong></h2>
                 <!--show epilogue-->
                 <form action="/epilogue" method='POST'>
